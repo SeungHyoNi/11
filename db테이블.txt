@@ -1,0 +1,35 @@
+멤버
+
+create table member(member_num int primary key auto_increment,
+id varchar(50) unique not null,
+password varchar(100) not null,
+email varchar(100) not null,
+name varchar(20) not null,
+phone varchar(20) not null,
+admin int(1)
+);
+
+퀴즈보드
+
+create table quizboard(quiz_num int primary key auto_increment,
+quiz_title varchar(30) not null,
+quiz_contents varchar(100) not null,
+quiz_writer varchar(20) not null,
+quiz_write_date date not null,
+quiz_answer1 varchar(20) not null,
+quiz_answer2 varchar(20) not null,
+quiz_answer3 varchar(20) not null,
+quiz_answer4 varchar(20) not null,
+quiz_true_answer int(1) not null,
+quiz_type varchar(20) not null
+);
+
+
+오답노트
+
+
+create table quizresult(id varchar(50),
+quiz_num int(10) not null,
+member_answer int(1) not null,
+answer_yn char(1) not null
+);
